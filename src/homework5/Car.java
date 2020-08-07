@@ -34,7 +34,7 @@ public class Car implements Runnable {
             Thread.sleep(500 + (int)(Math.random() * 800));
             System.out.println(this.name + " готов");
             barrier.await();
-            //все попадают к линии старта
+            //все попадают к линии старта;
             barrier.await();
             for (int i = 0; i < race.getStages().size(); i++) {
                 race.getStages().get(i).go(this);
