@@ -3,7 +3,7 @@ package homework5;
 import java.util.concurrent.Semaphore;
 
 public class Tunnel extends Stage {
-    private Semaphore smp = new Semaphore(MainClass.CARS_COUNT / 2);
+    private Semaphore smp = new Semaphore(MainClass.CARS_COUNT / 2);//ограничивает количество потоков при работе с ресурсами;
     public Tunnel() {
         this.length = 80;
         this.description = "Тоннель " + length + " метров";
